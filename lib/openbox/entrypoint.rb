@@ -20,5 +20,7 @@ module Openbox
     require 'openbox/commands/seed'
     require 'openbox/commands/console'
     require 'openbox/commands/sidekiq'
+    require 'openbox/commands/good_job'
+    require 'openbox/commands/solid_queue'
   end
 end
