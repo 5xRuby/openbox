@@ -43,6 +43,8 @@ The commands are pre-defined for the Rack and Rails applications.
 | `migrate` | `rails`           | Run database migration   |
 | `seed`    | `rails`           | Run database seed        |
 | `sidekiq` | `sidekiq`         | Run sidekiq server       |
+| `good_job` | `good_job`        | Run good_job worker      |
+| `solid_queue` | `solid_queue`  | Run solid_queue worker   |
 
 #### Customize Commands
 
