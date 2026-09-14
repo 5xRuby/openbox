@@ -37,7 +37,7 @@ The commands are pre-defined for the Rack and Rails applications.
 
 | Name      | Enabled Condition | Description              |
 |-----------|-------------------|--------------------------|
-| `server`  | `rails` or `rack` | Start application server |
+| `server`  | `rails` or `rack` | Start application server (wrapped with `thrust` when `thruster` present) |
 | `rake`    | `rails` or `rake` | Run rake tasks           |
 | `console` | `rails`           | Start rails console      |
 | `migrate` | `rails`           | Run database migration   |

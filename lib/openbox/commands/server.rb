@@ -13,9 +13,19 @@ module Openbox
       def execute
         Openbox.database.ensure_connection!
         invoke Migrate unless ENV['AUTO_MIGRATION'].nil?
-        return exec('bundle exec rails server -b 0.0.0.0') if Openbox.runtime.rails?
+        exec("bundle exec #{thruster}#{server_command}")
+      end
 
-        exec('bundle exec rackup -o 0.0.0.0')
+      private
+
+      def thruster
+        Openbox.runtime.has?('thruster') ? 'thrust ' : ''
+      end
+
+      def server_command
+        return 'rails server -b 0.0.0.0' if Openbox.runtime.rails?
+
+        'rackup -o 0.0.0.0'
       end
     end
 
