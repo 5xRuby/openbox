@@ -23,6 +23,7 @@ module Openbox
       end
 
       def server_command
+        return 'falcon host' if File.exist?('falcon.rb')
         return 'rails server -b 0.0.0.0' if Openbox.runtime.rails?
 
         'rackup -o 0.0.0.0'
